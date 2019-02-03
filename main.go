@@ -5,8 +5,9 @@ import (
 	"os"
 
 	"github.com/jroimartin/gocui"
-	"github.com/skanehira/docui/docker"
 	"github.com/skanehira/docui/panel"
+
+	"github.com/skanehira/docui/docker"
 )
 
 func main() {
@@ -16,6 +17,7 @@ func main() {
 		key      = flag.String("key", "", "key.pem file path")
 		ca       = flag.String("ca", "", "ca.pem file path")
 	)
+	flag.Parse()
 	config := docker.NewClientConfig(*endpoint, *cert, *key, *ca)
 	dockerClient := docker.NewDocker(config)
 
