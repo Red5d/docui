@@ -5,9 +5,8 @@ import (
 	"os"
 
 	"github.com/jroimartin/gocui"
-	"github.com/skanehira/docui/panel"
-
 	"github.com/skanehira/docui/docker"
+	"github.com/skanehira/docui/panel"
 )
 
 func main() {
